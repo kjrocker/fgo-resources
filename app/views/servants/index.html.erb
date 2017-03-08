@@ -1,9 +1,10 @@
 <h3>Welcome to the Servant Index Page</h3>
 
-<ul>
+<%= react_component('ServantList', servants: @servants) %>
+<!-- <ul>
   <% @servants.each do |servant| %>
     <li>
       <%= servant.name %>, <%= servant.servant_class.name %>
     </li>
   <% end %>
-</ul>
+</ul> -->
