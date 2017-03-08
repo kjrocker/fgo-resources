@@ -1,0 +1,2 @@
+module ServantHelper
+end
