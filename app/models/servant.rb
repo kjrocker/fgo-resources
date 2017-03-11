@@ -4,9 +4,9 @@ class Servant < ApplicationRecord
   def serialize
     @serialize ||= ServantSerializer.new(self)
   end
-  
+
   class << self
-    ServantClass::ALL_CLASSES.each do |k, v|
+    ServantClass.all_classes.each do |k|
       # Servant.saber = Servant.joins(:servant_class).merge(ServantClass.saber)
       define_method(k) { joins(:servant_class).merge(ServantClass.send(k)) }
     end

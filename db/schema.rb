@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20170308041603) do
   end
 
   create_table "servants", force: :cascade do |t|
+    t.integer  "official_id"
     t.string   "name"
     t.integer  "rarity"
     t.integer  "servant_class_id"
