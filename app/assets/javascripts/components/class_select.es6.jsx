@@ -2,25 +2,35 @@ class ClassSelect extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      classNames: props.classes.map((c) => c.name)
+      useImages: false
     };
     this.handleClick = this.handleClick.bind(this);
+    this.createNavLink = this.createNavLink.bind(this);
   }
 
   handleClick(e) {
-    this.props.changeFilter('className', e.currentTarget.text)
+    this.props.changeFilter('className', e.currentTarget.title)
     e.preventDefault()
+  }
+
+  createNavLink(c) {
+    if (this.state.useImages) {
+      return <img src={c.icon_url} alt={c.name} height='40' width='40'/>
+    } else {
+      return c.name
+    }
   }
 
   render () {
     const { currentFilter } = this.props
-    const links = this.state.classNames.map(
-      (name, index) => {
-        const isFiltered = currentFilter.indexOf(name) != -1
+    const links = this.props.classes.map(
+      (c, index) => {
+        const isFiltered = currentFilter.indexOf(c.name) != -1
         return (
           <li className={isFiltered ? 'active' : 'inactive'} key={index}>
-            <a
-              onClick={this.handleClick}>{name}</a>
+            <a onClick={this.handleClick} title={c.name}>
+              { this.createNavLink(c) }
+            </a>
           </li>
         )
       }
