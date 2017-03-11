@@ -1,157 +1,158 @@
-Name,Rarity,Class
-Artoria Pendragon,5,Saber
-Artoria Pendragon (Alter),4,Saber
-Artoria Pendragon (Lily),4,Saber
-Nero Claudius,4,Saber
-Siegfried,4,Saber
-Gaius Julius Caesar,3,Saber
-Attila,5,Saber
-Gilles de Rais (Saber),3,Saber
-Le Chevalier d'Eon,4,Saber
-Okita Souji,5,Saber
-Fergus Mac Roich,3,Saber
-Mordred,5,Saber
-Nero Claudius (Bride),5,Saber
-Ryougi Shiki (Saber),5,Saber
-Rama,4,Saber
-Lancelot (Saber),4,Saber
-Gawain,4,Saber
-Bedivere,3,Saber
-Elizabeth Bathory (Brave),4,Saber
-Myamoto Susashi,5,Saber
-Arthur Pendragon,5,Saber
-Jeanne d'Arc,5,Ruler
-Amakusa Shirou,5,Ruler
-Saint Martha (Ruler),4,Ruler
-Edmond Dantes,5,Avenger
-Jeanne d'Arc (Alter),5,Avenger
-Angra Mainyu,0,Avenger
-Gorgon,4,Avenger
-Hessian Lobo,4,Avenger
-Leonardo Da Vinci,5,Caster
-Illyasviel von Einzbern,5,Caster
-Gilgamesh (Caster),4,Caster
-Merlin,5,Caster
-Paracelsus Van Hohenheim,3,Caster
-Charles Babbage,3,Caster
-Medea (Lily),4,Caster
-Thomas Edison,4,Caster
-Nitocris,4,Caster
-Xuanzang,5,Caster
-Irisviel (Dress of Heaven),4,Caster
-Mephistopheles,3,Caster
-William Shakespeare,2,Caster
-Gilles de Rais,3,Caster
-Medea,3,Caster
-Wolfgang Amadeus Mozart,1,Caster
-Zhuge Liang (Lord El-Melloi II),5,Caster
-Cu Chulainn (Caster),3,Caster
-Hans Christian Andersen,2,Caster
-Elizabeth Bathory (Halloween),4,Caster
-Tamamo no Mae,5,Caster
-Nursery Rhyme,4,Caster
-Helena Blavatsky,4,Caster
-Geronimo,3,Caster
-Marie Antoinette (Caster),4,Caster
-EMIYA,4,Archer
-Gilgamesh,5,Archer
-Robin Hood,3,Archer
-Atalanta,4,Archer
-Euryale,3,Archer
-Arash,1,Archer
-Orion,5,Archer
-David,3,Archer
-Oda Nobunaga,4,Archer
-Nikola Tesla,5,Archer
-Arjuna,5,Archer
-Young Gil,3,Archer
-Billy the Kid,3,Archer
-Tristan,4,Archer
-Tawara Touda,3,Archer
-Artoria Pendragon (Archer),5,Archer
-Anne Bonny & Mary Read (Archer),4,Archer
-Chloe von Einzbern,4,Archer
-Ishtar,5,Archer
-James Moriarty,5,Archer
-EMIYA (Alter),4,Archer
-Cu Chulainn,3,Lancer
-Elizabeth Bathory,4,Lancer
-Musashibou Benkei,2,Lancer
-Cu Chulainn (Prototype),3,Lancer
-Leonidas,2,Lancer
-Romulus,3,Lancer
-Hector,3,Lancer
-Scathach,5,Lancer
-Diarmuid Ua Duibhne,3,Lancer
-Artoria Pendragon (Alter Lancer),4,Lancer
-Karna,5,Lancer
-Fionn mac Cumhaill,4,Lancer
-Brynhildr,5,Lancer
-Li Shuwen (Lancer),4,Lancer
-Artoria Pendragon (Lancer),5,Lancer
-Tamamo no Mae (Lancer),5,Lancer
-Kiyohime (Lancer),4,Lancer
-Vlad III (Extra),4,Lancer
-Jeanne d'Arc (Alter) (Santa Lily),4,Lancer
-Enkidu,5,Lancer
-Medusa (Lancer),4,Lancer
-Jaguar Man,3,Lancer
-Medusa,3,Rider
-Saint George,2,Rider
-Edward Teach,2,Rider
-Boudica,3,Rider
-Ushiwakamaru,3,Rider
-Alexander,3,Rider
-Marie Antoinette,4,Rider
-Saint Martha,4,Rider
-Francis Drake,5,Rider
-Anne Bonny & Mary Read,4,Rider
-Artoria Pendragon (Santa Alter),4,Rider
-Astolfo,4,Rider
-Medb,5,Rider
-Iskandar,5,Rider
-Sakata Kintoki,4,Rider
-Ramesses II,5,Rider
-Mordred (Rider),4,Rider
-Quetzalcoatl,5,Rider
-Sasaki Kojirou,1,Assassin
-Cursed Arm Hassan,2,Assassin
-Stheno,4,Assassin
-Jing Ke,3,Assassin
-Charles-Henri Sanson,3,Assassin
-Phantom of the Opera,2,Assassin
-Mata Hari,1,Assassin
-Carmilla,4,Assassin
-Jack the Ripper,5,Assassin
-Henry Jekyll & Hyde,3,Assassin
-Mysterious Heroine X,5,Assassin
-Ryougi Shiki (Assassin),4,Assassin
-EMIYA (Assassin),4,Assassin
-Hundred-Faced Hassan,3,Assassin
-Shuten Douji,5,Assassin
-Fuuma Kotarou,3,Assassin
-Hassan of Serenity,3,Assassin
-Scathach (Assassin),4,Assassin
-Cleopatra,5,Assassin
-King Hassan,5,Assassin
-Yan Qing,4,Assassin
-Heracles,4,Berserker
-Lancelot,4,Berserker
-Lu Bu,3,Berserker
-Spartacus,1,Berserker
-Sakata Kintoki,5,Berserker
-Vlad III,5,Berserker
-Asterios,1,Berserker
-Caligula,2,Berserker
-Darius III,3,Berserker
-Kiyohime,3,Berserker
-Eric Bloodaxe,2,Berserker
-Tamamo Cat,4,Berserker
-Hyde,3,Berserker
-Frankenstein,4,Berserker
-Beowulf,4,Berserker
-Nightingale,5,Berserker
-Cu Chulainn (Alter),5,Berserker
-Minamoto no Yorimitsu,5,Berserker
-Ibaraki Douji,4,Berserker
-Misterious Heroine X (Alter),5,Berserker
+ID,Name,Rarity,Class
+001,Mashu Kyrielight,3,Shielder
+002,Artoria Pendragon,5,Saber
+003,Artoria Pendragon (Alter),4,Saber
+004,Artoria Pendragon (Lily),4,Saber
+005,Nero Claudius,4,Saber
+006,Siegfried,4,Saber
+007,Gaius Julius Caesar,3,Saber
+008,Attila,5,Saber
+009,Gilles de Rais (Saber),3,Saber
+010,Le Chevalier d'Eon,4,Saber
+068,Okita Souji,5,Saber
+072,Fergus Mac Roich,3,Saber
+076,Mordred,5,Saber
+090,Nero Claudius (Bride),5,Saber
+091,Ryougi Shiki (Saber),5,Saber
+101,Rama,4,Saber
+121,Lancelot (Saber),4,Saber
+123,Gawain,4,Saber
+126,Bedivere,3,Saber
+138,Elizabeth Bathory (Brave),4,Saber
+153,Myamoto Susashi,5,Saber
+160,Arthur Pendragon,5,Saber
+059,Jeanne d'Arc,5,Ruler
+093,Amakusa Shirou,5,Ruler
+135,Saint Martha (Ruler),4,Ruler
+096,Edmond Dantes,5,Avenger
+106,Jeanne d'Arc (Alter),5,Avenger
+107,Angra Mainyu,0,Avenger
+147,Gorgon,4,Avenger
+158,Hessian Lobo,4,Avenger
+127,Leonardo Da Vinci,5,Caster
+136,Illyasviel von Einzbern,5,Caster
+145,Gilgamesh (Caster),4,Caster
+150,Merlin,5,Caster
+079,Paracelsus Van Hohenheim,3,Caster
+080,Charles Babbage,3,Caster
+067,Medea (Lily),4,Caster
+103,Thomas Edison,4,Caster
+120,Nitocris,4,Caster
+113,Xuanzang,5,Caster
+111,Irisviel (Dress of Heaven),4,Caster
+035,Mephistopheles,3,Caster
+034,William Shakespeare,2,Caster
+032,Gilles de Rais,3,Caster
+031,Medea,3,Caster
+036,Wolfgang Amadeus Mozart,1,Caster
+037,Zhuge Liang (Lord El-Melloi II),5,Caster
+038,Cu Chulainn (Caster),3,Caster
+033,Hans Christian Andersen,2,Caster
+061,Elizabeth Bathory (Halloween),4,Caster
+062,Tamamo no Mae,5,Caster
+074,Nursery Rhyme,4,Caster
+100,Helena Blavatsky,4,Caster
+104,Geronimo,3,Caster
+130,Marie Antoinette (Caster),4,Caster
+011,EMIYA,4,Archer
+012,Gilgamesh,5,Archer
+013,Robin Hood,3,Archer
+014,Atalanta,4,Archer
+015,Euryale,3,Archer
+016,Arash,1,Archer
+060,Orion,5,Archer
+063,David,3,Archer
+069,Oda Nobunaga,4,Archer
+077,Nikola Tesla,5,Archer
+084,Arjuna,5,Archer
+095,Young Gil,3,Archer
+105,Billy the Kid,3,Archer
+122,Tristan,4,Archer
+125,Tawara Touda,3,Archer
+129,Artoria Pendragon (Archer),5,Archer
+131,Anne Bonny & Mary Read (Archer),4,Archer
+137,Chloe von Einzbern,4,Archer
+142,Ishtar,5,Archer
+156,James Moriarty,5,Archer
+157,EMIYA (Alter),4,Archer
+017,Cu Chulainn,3,Lancer
+018,Elizabeth Bathory,4,Lancer
+019,Musashibou Benkei,2,Lancer
+020,Cu Chulainn (Prototype),3,Lancer
+021,Leonidas,2,Lancer
+022,Romulus,3,Lancer
+064,Hector,3,Lancer
+070,Scathach,5,Lancer
+071,Diarmuid Ua Duibhne,3,Lancer
+078,Artoria Pendragon (Alter Lancer),4,Lancer
+085,Karna,5,Lancer
+087,Fionn mac Cumhaill,4,Lancer
+088,Brynhildr,5,Lancer
+102,Li Shuwen (Lancer),4,Lancer
+119,Artoria Pendragon (Lancer),5,Lancer
+128,Tamamo no Mae (Lancer),5,Lancer
+134,Kiyohime (Lancer),4,Lancer
+140,Vlad III (Extra),4,Lancer
+141,Jeanne d'Arc (Alter) (Santa Lily),4,Lancer
+143,Enkidu,5,Lancer
+146,Medusa (Lancer),4,Lancer
+148,Jaguar Man,3,Lancer
+023,Medusa,3,Rider
+024,Saint George,2,Rider
+025,Edward Teach,2,Rider
+026,Boudica,3,Rider
+027,Ushiwakamaru,3,Rider
+038,Alexander,3,Rider
+029,Marie Antoinette,4,Rider
+030,Saint Martha,4,Rider
+065,Francis Drake,5,Rider
+066,Anne Bonny & Mary Read,4,Rider
+073,Artoria Pendragon (Santa Alter),4,Rider
+094,Astolfo,4,Rider
+099,Medb,5,Rider
+108,Iskandar,5,Rider
+115,Sakata Kintoki,4,Rider
+118,Ramesses II,5,Rider
+132,Mordred (Rider),4,Rider
+144,Quetzalcoatl,5,Rider
+039,Sasaki Kojirou,1,Assassin
+040,Cursed Arm Hassan,2,Assassin
+041,Stheno,4,Assassin
+042,Jing Ke,3,Assassin
+043,Charles-Henri Sanson,3,Assassin
+044,Phantom of the Opera,2,Assassin
+045,Mata Hari,1,Assassin
+046,Carmilla,4,Assassin
+075,Jack the Ripper,5,Assassin
+081,Henry Jekyll & Hyde,3,Assassin
+086,Mysterious Heroine X,5,Assassin
+092,Ryougi Shiki (Assassin),4,Assassin
+109,EMIYA (Assassin),4,Assassin
+110,Hundred-Faced Hassan,3,Assassin
+112,Shuten Douji,5,Assassin
+117,Fuuma Kotarou,3,Assassin
+124,Hassan of Serenity,3,Assassin
+133,Scathach (Assassin),4,Assassin
+139,Cleopatra,5,Assassin
+154,King Hassan,5,Assassin
+159,Yan Qing,4,Assassin
+047,Heracles,4,Berserker
+048,Lancelot,4,Berserker
+049,Lu Bu,3,Berserker
+050,Spartacus,1,Berserker
+051,Sakata Kintoki,5,Berserker
+052,Vlad III,5,Berserker
+053,Asterios,1,Berserker
+054,Caligula,2,Berserker
+055,Darius III,3,Berserker
+056,Kiyohime,3,Berserker
+057,Eric Bloodaxe,2,Berserker
+058,Tamamo Cat,4,Berserker
+081,Hyde,3,Berserker
+082,Frankenstein,4,Berserker
+089,Beowulf,4,Berserker
+097,Nightingale,5,Berserker
+098,Cu Chulainn (Alter),5,Berserker
+114,Minamoto no Yorimitsu,5,Berserker
+116,Ibaraki Douji,4,Berserker
+155,Misterious Heroine X (Alter),5,Berserker

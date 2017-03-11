@@ -5,6 +5,7 @@ class CreateServants < ActiveRecord::Migration[5.0]
     end
 
     create_table :servants do |t|
+      t.integer :official_id
       t.string :name
       t.integer :rarity
       t.references :servant_class, foreign_key: true
