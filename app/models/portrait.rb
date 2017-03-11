@@ -1,0 +1,2 @@
+class Portrait < CardImage
+end

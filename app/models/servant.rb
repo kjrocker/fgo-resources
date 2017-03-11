@@ -1,4 +1,4 @@
-class Servant < ApplicationRecord
+class Servant < Card 
   belongs_to :servant_class
 
   def serialize

@@ -1,0 +1,13 @@
+Sort,Name,Image
+01,Shielder,'shielder_icon.png'
+02,Saber,'saber_icon.png'
+03,Archer,'archer_icon.png'
+04,Lancer,'lancer_icon.png'
+05,Rider,'rider_icon.png'
+06,Caster,'caster_icon.png'
+07,Assassin,'assassin_icon.png'
+08,Berserker,'berserker_icon.png'
+09,Ruler,'ruler_icon.png'
+10,Avenger,'avenger_icon.png'
+11,Beast,'beast_icon.png'
+12,Other,'other_icon.png'

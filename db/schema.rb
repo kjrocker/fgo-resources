@@ -10,24 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170308041603) do
+ActiveRecord::Schema.define(version: 20170311184350) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "servant_classes", force: :cascade do |t|
-    t.string "name"
+  create_table "card_images", force: :cascade do |t|
+    t.string  "type"
+    t.string  "name"
+    t.jsonb   "image"
+    t.integer "cards_id"
+    t.index ["cards_id"], name: "index_card_images_on_cards_id", using: :btree
   end
 
-  create_table "servants", force: :cascade do |t|
+  create_table "cards", force: :cascade do |t|
     t.integer  "official_id"
     t.string   "name"
     t.integer  "rarity"
     t.integer  "servant_class_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.index ["servant_class_id"], name: "index_servants_on_servant_class_id", using: :btree
+    t.string   "type"
+    t.index ["servant_class_id"], name: "index_cards_on_servant_class_id", using: :btree
   end
 
-  add_foreign_key "servants", "servant_classes"
+  create_table "servant_classes", force: :cascade do |t|
+    t.string  "name"
+    t.integer "sort_order"
+    t.string  "icon"
+  end
+
+  add_foreign_key "card_images", "cards", column: "cards_id"
+  add_foreign_key "cards", "servant_classes"
 end
