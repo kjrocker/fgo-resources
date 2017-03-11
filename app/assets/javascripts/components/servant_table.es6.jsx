@@ -11,9 +11,9 @@ class ServantTable extends React.Component {
       <table className="table table-hover">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Class</th>
-            <th>Rarity</th>
+            <th onClick={(e) => this.props.handleSort('name')}>Name</th>
+            <th onClick={(e) => this.props.handleSort('className')}>Class</th>
+            <th onClick={(e) => this.props.handleSort('rarity')}>Rarity</th>
           </tr>
         </thead>
         <tbody>

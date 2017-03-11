@@ -13,6 +13,29 @@ class ServantList extends React.Component {
     }
     this.sortBy = this.sortBy.bind(this);
     this.displayServant = this.displayServant.bind(this)
+    this.handleFilter = this.handleFilter.bind(this);
+    this.handleSort = this.handleSort.bind(this);
+    this.compare = this.compare.bind(this);
+  }
+
+  handleFilter(field, value) {
+    let values = this.state.filter[field]
+    const valueIndex = values.indexOf(value)
+    if (valueIndex == -1) {
+      values.push(value)
+    } else {
+      values.splice(valueIndex, 1)
+    }
+    this.setState({ filter: { ...this.state.filter, [field]: values } })
+  }
+
+  handleSort(field) {
+    const currentOrder = this.state.order
+    let newDirection = 'desc'
+    if (currentOrder.field == field && currentOrder.direction == 'desc') {
+      newDirection = 'asc'
+    }
+    this.setState({ order: {field, direction: newDirection }})
   }
 
   compare(x, y) {
@@ -43,7 +66,9 @@ class ServantList extends React.Component {
   render () {
     return (
       <div>
-        <ServantTable servants={
+        <ClassSelect currentFilter={this.state.filter.className} classes={this.props.classes} changeFilter={this.handleFilter}/>
+        <RaritySelect currentFilter={this.state.filter.rarity} changeFilter={this.handleFilter}/>
+        <ServantTable handleSort={this.handleSort} servants={
           this.props.servants.filter(this.displayServant).sort(this.sortBy)
         }/>
       </div>
