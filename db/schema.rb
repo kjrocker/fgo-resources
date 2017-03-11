@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170308041603) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "servant_classes", force: :cascade do |t|
     t.string "name"
   end
@@ -22,7 +25,8 @@ ActiveRecord::Schema.define(version: 20170308041603) do
     t.integer  "servant_class_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.index ["servant_class_id"], name: "index_servants_on_servant_class_id"
+    t.index ["servant_class_id"], name: "index_servants_on_servant_class_id", using: :btree
   end
 
+  add_foreign_key "servants", "servant_classes"
 end
