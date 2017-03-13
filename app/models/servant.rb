@@ -1,8 +1,12 @@
-class Servant < Card 
+class Servant < Card
   belongs_to :servant_class
 
   def serialize
     @serialize ||= ServantSerializer.new(self)
+  end
+
+  def self.sorted
+    order(official_id: :asc)
   end
 
   class << self
