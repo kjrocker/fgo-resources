@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20170311184350) do
   create_table "card_images", force: :cascade do |t|
     t.string  "type"
     t.string  "name"
-    t.jsonb   "image"
+    t.string  "image"
     t.integer "cards_id"
     t.index ["cards_id"], name: "index_card_images_on_cards_id", using: :btree
   end

@@ -12,7 +12,7 @@ class AddImagesToServants < ActiveRecord::Migration[5.0]
     create_table :card_images do |t|
       t.string :type
       t.string :name
-      t.jsonb :image
+      t.string :image
       t.references :cards, foreign_key: true
     end
   end
