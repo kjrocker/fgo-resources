@@ -13,7 +13,7 @@ class AddImagesToServants < ActiveRecord::Migration[5.0]
       t.string :type
       t.string :name
       t.string :image
-      t.references :cards, foreign_key: true
+      t.references :card, foreign_key: true
     end
   end
 end

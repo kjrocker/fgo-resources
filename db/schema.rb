@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20170311184350) do
     t.string  "type"
     t.string  "name"
     t.string  "image"
-    t.integer "cards_id"
-    t.index ["cards_id"], name: "index_card_images_on_cards_id", using: :btree
+    t.integer "card_id"
+    t.index ["card_id"], name: "index_card_images_on_card_id", using: :btree
   end
 
   create_table "cards", force: :cascade do |t|
@@ -40,6 +40,6 @@ ActiveRecord::Schema.define(version: 20170311184350) do
     t.string  "icon"
   end
 
-  add_foreign_key "card_images", "cards", column: "cards_id"
+  add_foreign_key "card_images", "cards"
   add_foreign_key "cards", "servant_classes"
 end

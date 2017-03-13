@@ -9,9 +9,10 @@ class ServantRow extends React.Component {
 
   render () {
     const { servant } = this.props
+    const iconURL = servant.firstIcon ? servant.firstIcon.url : ''
     return (
       <tr>
-        <td>{ servant.name }</td>
+        <td><img src={iconURL} height='50' width='50'/>{ servant.name }</td>
         <td>{ servant.className }</td>
         <td>{ servant.rarity }</td>
       </tr>
