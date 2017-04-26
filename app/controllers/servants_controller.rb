@@ -15,7 +15,7 @@ class ServantsController < ApplicationController
   end
 
   def random
-    @servant = Servant.order("RANDOM()").first
+    @servant = Servant.sample.first
     respond_to do |format|
       format.html { render :show }
     end
