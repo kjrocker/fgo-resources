@@ -1,13 +1,7 @@
 module SimpleSample
-  extend ActiveSupport::Concern
-  included do
-    # code ...
+  def self.included base
+    base.extend ClassMethods
   end
-
-  # instance methods go here
-  # def instance_method
-  #
-  # end
 
   module ClassMethods
     def sample(amount = 1)
