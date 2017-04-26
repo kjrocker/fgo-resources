@@ -6,4 +6,18 @@ class ServantsController < ApplicationController
       format.html { render :index }
     end
   end
+
+  def show
+    @servant = Servant.find(params[:id])
+    respond_to do |format|
+      format.html { render :show }
+    end
+  end
+
+  def random
+    @servant = Servant.order("RANDOM()").first
+    respond_to do |format|
+      format.html { render :show }
+    end
+  end
 end

@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resources :servants, only: [:index]
+  get 'servants/random', as: :random_servant
+  resources :servants, only: [:index, :show]
 end
