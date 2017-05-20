@@ -1,3 +1,10 @@
 // Place all the styles related to the Servant controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.servant-table-row {
+  font-size: 16px;
+  td.card-icon {
+    padding: 1px !important;
+  }
+}

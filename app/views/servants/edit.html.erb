@@ -1,0 +1,37 @@
+<h3>Editing <%= @servant_form.name %></h3>
+
+<%= form_for @servant_form, class: "form-group", url: servant_path(@servant_form.id) do |f| %>
+  <% if @servant_form.errors.any? %>
+    <div>
+      <%= pluralize(@servant_form.errors.count, "error") %> stopped this Servant from being edited</h2>
+
+      <ul>
+      <% @servant_form.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :rarity %>
+    <%= f.number_field :rarity, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :servant_class %>
+    <%= f.select :servant_class, @servant_form.all_classes, {}, { class: 'form-control' } %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar, class: 'form-control' %>
+  </div>
+
+  <%= f.submit %>
+<% end %>

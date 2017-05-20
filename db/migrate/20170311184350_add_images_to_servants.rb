@@ -3,17 +3,16 @@ class AddImagesToServants < ActiveRecord::Migration[5.0]
     # Prepare Servants Table for STI
     rename_table :servants, :cards
     add_column :cards, :type, :string
-    Card.update_all(type: 'Servant')
 
-    # Add Sort and Icon to Classes
-    add_column :servant_classes, :sort_order, :integer
+    # Set type to 'Servant' whenever there's a Servant Class
+    Card.where('servant_class_id IS NOT NULL').update_all(type: 'Servant')
+
+    # Add Avatars and Portraits
+    add_column :cards, :avatar, :string
+    add_column :cards, :portraits, :json
+
+    # Add Icons to Classes
     add_column :servant_classes, :icon, :string
-
-    create_table :card_images do |t|
-      t.string :type
-      t.string :name
-      t.string :image
-      t.references :card, foreign_key: true
-    end
+    add_column :servant_classes, :sort_order, :integer
   end
 end

@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resources :servants, only: [:index]
+  root to: "servants#index"
+  resources :servants, only: [:index, :show, :edit, :update]
 end

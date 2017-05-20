@@ -1,4 +1,8 @@
 class Card < ApplicationRecord
-  has_many :portraits
-  has_many :icons
+  mount_uploader :avatar, AvatarUploader
+  mount_uploader :portrait, PortraitUploader
+
+  def self.sorted
+    order(official_id: :asc)
+  end
 end

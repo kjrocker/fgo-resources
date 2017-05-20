@@ -15,14 +15,6 @@ ActiveRecord::Schema.define(version: 20170311184350) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "card_images", force: :cascade do |t|
-    t.string  "type"
-    t.string  "name"
-    t.string  "image"
-    t.integer "card_id"
-    t.index ["card_id"], name: "index_card_images_on_card_id", using: :btree
-  end
-
   create_table "cards", force: :cascade do |t|
     t.integer  "official_id"
     t.string   "name"
@@ -31,15 +23,16 @@ ActiveRecord::Schema.define(version: 20170311184350) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.string   "type"
+    t.string   "avatar"
+    t.json     "portraits"
     t.index ["servant_class_id"], name: "index_cards_on_servant_class_id", using: :btree
   end
 
   create_table "servant_classes", force: :cascade do |t|
     t.string  "name"
-    t.integer "sort_order"
     t.string  "icon"
+    t.integer "sort_order"
   end
 
-  add_foreign_key "card_images", "cards"
   add_foreign_key "cards", "servant_classes"
 end

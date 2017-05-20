@@ -1,7 +1,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: krocker
+  host: localhost
+  username: postgres
   password: password
   pool: 5
   timeout: 5000

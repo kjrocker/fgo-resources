@@ -1,3 +1,27 @@
-<h3>Welcome to the Servant Index Page</h3>
+<h3>Servant Library</h3>
 
-<%= react_component('ServantList', { servants: @servants, classes: @classes }) %>
+<table id="servantTable" data-toggle="table"
+  data-show-sort="true"
+  data-sort-stable="true"
+  data-search="true"
+  data-multi-search="true"
+  data-search-time-out="100"
+  data-pagination="true"
+  data-page-size="25"
+  data-show-pagination-switch="true"
+  class="table table-hover bootstrap-table">
+  <thead>
+    <tr>
+      <th class="hidden" data-searchable="true">Searchable Name</th>
+      <th class="hidden" data-searchable="true">Searchable Class</th>
+      <th data-width="5%" data-field="id" data-sortable="true">Official ID</th>
+      <th data-width="5%" data-field="icon">Icon</th>
+      <th data-width="60%" data-field="name" data-searchable="false" data-sortable="true">Name</th>
+      <th data-width="15%" data-field="class" data-searchable="false" data-sortable="true">Class</th>
+      <th data-width="15%" data-field="rarity" data-sortable="true">Rarity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: 'servant_row', collection: @servants, as: :servant %>
+  </tbody>
+</table>
