@@ -35,6 +35,6 @@ class ServantsController < ApplicationController
   private
 
   def servant_form_params
-    params.require(:servant_form).permit(:name, :id, :rarity, :servant_class, :avatar)
+    params.require(:servant_form).permit(:name, :id, :rarity, :servant_class, :avatar, :tag_list)
   end
 end

@@ -3,7 +3,7 @@ class ServantForm
 
   delegate :id, to: :servant
 
-  attr_accessor :name, :official_id, :rarity, :servant_class, :avatar, :all_classes, :servant
+  attr_accessor :name, :official_id, :rarity, :tag_list, :servant_class, :avatar, :all_classes, :servant
 
   validates :name, presence: true
   validates :official_id, presence: true
@@ -19,6 +19,7 @@ class ServantForm
       @portraits = attr[:portraits] || servant.portraits
       @rarity = attr[:rarity] || servant.rarity
       @servant_class = attr[:servant_class] || servant.servant_class_id
+      @tags = attr[:tag_list] || servant.tag_list
     else
       super(attr)
     end
