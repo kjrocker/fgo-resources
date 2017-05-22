@@ -1,10 +1,24 @@
 <h3>Servant Library</h3>
 
+<div id="servantTableFilter">
+  <ul class="list-inline">
+    <% @classes.each do |servant_class| %>
+      <li class="list-group-item" data-filter-field="class" data-filter-value="<%= servant_class.name %>">
+        <%= image_tag "servant_icons/#{servant_class.icon}", size: "40x40" %>
+      </li>
+    <% end %>
+  </ul>
+  <ul class="list-inline">
+    <% 6.times do |i| %>
+      <li class="list-group-item" data-filter-field="rarity" data-filter-value="<%= i %>"> <%= "#{i}★" %> </li>
+    <% end %>
+  </ul>
+</div>
 <table id="servantTable" data-toggle="table"
   data-show-sort="true"
   data-sort-stable="true"
   data-search="true"
-  data-multi-search="true"
+  data-multiple-search="true"
   data-search-time-out="100"
   data-pagination="true"
   data-page-size="25"
@@ -12,13 +26,14 @@
   class="table table-hover bootstrap-table">
   <thead>
     <tr>
-      <th class="hidden" data-searchable="true">Searchable Name</th>
-      <th class="hidden" data-searchable="true">Searchable Class</th>
+      <th class="hidden" data-field="name" data-searchable="true">Searchable Name</th>
+      <th class="hidden" data-field="class" data-searchable="true">Searchable Class</th>
+      <th class="hidden" data-field="rarity" data-searchable="false">Rarity Integer</th>
       <th data-width="5%" data-field="id" data-sortable="true">Official ID</th>
       <th data-width="5%" data-field="icon">Icon</th>
-      <th data-width="60%" data-field="name" data-searchable="false" data-sortable="true">Name</th>
-      <th data-width="15%" data-field="class" data-searchable="false" data-sortable="true">Class</th>
-      <th data-width="15%" data-field="rarity" data-sortable="true">Rarity</th>
+      <th data-width="60%" data-field="displayName" data-searchable="false" data-sortable="true">Name</th>
+      <th data-width="15%" data-field="displayClass" data-searchable="false" data-sortable="true">Class</th>
+      <th data-width="15%" data-field="stars" data-sortable="true">Rarity</th>
     </tr>
   </thead>
   <tbody>
