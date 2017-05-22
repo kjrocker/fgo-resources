@@ -1,6 +1,6 @@
 class ServantsController < ApplicationController
   def index
-    @servants = Servant.sorted.includes(:servant_class)
+    @servants = Servant.sorted.includes(:servant_class).with_tags
     @classes = ServantClass.with_servants.sorted
     respond_to do |format|
       format.html { render :index }

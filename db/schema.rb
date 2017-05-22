@@ -15,15 +15,6 @@ ActiveRecord::Schema.define(version: 20170521204343) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "card_tags", force: :cascade do |t|
-    t.integer "card_id"
-    t.integer "tag_id"
-    t.index ["card_id", "tag_id"], name: "index_card_tags_on_card_id_and_tag_id", using: :btree
-    t.index ["card_id"], name: "index_card_tags_on_card_id", using: :btree
-    t.index ["tag_id", "card_id"], name: "index_card_tags_on_tag_id_and_card_id", using: :btree
-    t.index ["tag_id"], name: "index_card_tags_on_tag_id", using: :btree
-  end
-
   create_table "cards", force: :cascade do |t|
     t.integer  "official_id"
     t.string   "name"
@@ -43,6 +34,16 @@ ActiveRecord::Schema.define(version: 20170521204343) do
     t.integer "sort_order"
   end
 
+  create_table "taggings", force: :cascade do |t|
+    t.string  "taggable_type"
+    t.integer "taggable_id"
+    t.integer "tag_id"
+    t.index ["tag_id", "taggable_id"], name: "index_taggings_on_tag_id_and_taggable_id", using: :btree
+    t.index ["tag_id"], name: "index_taggings_on_tag_id", using: :btree
+    t.index ["taggable_id", "tag_id"], name: "index_taggings_on_taggable_id_and_tag_id", using: :btree
+    t.index ["taggable_type", "taggable_id"], name: "index_taggings_on_taggable_type_and_taggable_id", using: :btree
+  end
+
   create_table "tags", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -50,7 +51,6 @@ ActiveRecord::Schema.define(version: 20170521204343) do
     t.index ["name"], name: "index_tags_on_name", unique: true, using: :btree
   end
 
-  add_foreign_key "card_tags", "cards"
-  add_foreign_key "card_tags", "tags"
   add_foreign_key "cards", "servant_classes"
+  add_foreign_key "taggings", "tags"
 end

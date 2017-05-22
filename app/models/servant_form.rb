@@ -19,7 +19,7 @@ class ServantForm
       @portraits = attr[:portraits] || servant.portraits
       @rarity = attr[:rarity] || servant.rarity
       @servant_class = attr[:servant_class] || servant.servant_class_id
-      @tags = attr[:tag_list] || servant.tag_list
+      @tag_list = attr[:tag_list] || servant.tag_list
     else
       super(attr)
     end
@@ -56,5 +56,6 @@ class ServantForm
       servant_class_id: servant_class,
       avatar: avatar
     )
+    @servant.tag_list = tag_list
   end
 end
