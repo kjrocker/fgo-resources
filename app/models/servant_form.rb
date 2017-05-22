@@ -1,24 +1,15 @@
 class ServantForm
   include ActiveModel::Model
 
-  delegate :id, to: :servant
+  delegate :id, :rarity, :official_id, :name, to: :servant
 
-  attr_accessor :name, :official_id, :rarity, :tag_list, :servant_class, :avatar, :all_classes, :servant
-
-  validates :name, presence: true
-  validates :official_id, presence: true
-  validates :rarity, presence: true
-  validates :servant_class, presence: true
+  attr_accessor :tag_list, :servant_class, :avatar, :portraits, :servant
 
   def initialize(attr = {})
     if attr[:id].present?
       @servant = Servant.find(attr[:id])
-      @name = attr[:name] || servant.name
-      @official_id = attr[:official_id] || servant.official_id
       @avatar = attr[:avatar] || servant.avatar
       @portraits = attr[:portraits] || servant.portraits
-      @rarity = attr[:rarity] || servant.rarity
-      @servant_class = attr[:servant_class] || servant.servant_class_id
       @tag_list = attr[:tag_list] || servant.tag_list
     else
       super(attr)
@@ -50,11 +41,8 @@ class ServantForm
 
   def update_form
     @servant.update(
-      name: name,
-      official_id: official_id,
-      rarity: rarity,
-      servant_class_id: servant_class,
-      avatar: avatar
+      avatar: avatar,
+      portraits: portraits
     )
     @servant.tag_list = tag_list
   end

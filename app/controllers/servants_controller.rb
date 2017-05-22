@@ -15,7 +15,8 @@ class ServantsController < ApplicationController
   end
 
   def edit
-    @servant_form = ServantForm.new(Servant.find(params[:id]))
+    @servant = Servant.find(params[:id])
+    @servant_form = ServantForm.new(@servant)
     respond_to do |format|
       format.html { render :edit }
     end
