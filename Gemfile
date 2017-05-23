@@ -36,6 +36,7 @@ gem 'acts-as-taggable-on', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-aws'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
