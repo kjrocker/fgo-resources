@@ -13,7 +13,7 @@ CarrierWave.configure do |config|
     config.aws_credentials = {
       :access_key_id          => ENV.fetch('S3_ACCESS_ID'),
       :secret_access_key      => ENV.fetch('S3_SECRET_KEY'),
-      :region                 => 'us-west-1'
+      :region                 => 'us-west-2'
     }
 
     config.aws_attributes = {
