@@ -2,15 +2,21 @@
 
 <div id="servantTableFilter">
   <ul class="list-inline">
+    <li class="list-group-item reset" data-field="class">
+      Reset Class Filter
+    </li>
     <% @classes.each do |servant_class| %>
-      <li class="list-group-item" data-filter-field="class" data-filter-value="<%= servant_class.name %>">
+      <li class="list-group-item filter" data-field="class" data-value="<%= servant_class.name %>">
         <%= image_tag "servant_icons/#{servant_class.icon}", size: "40x40" %>
       </li>
     <% end %>
   </ul>
   <ul class="list-inline">
+    <li class="list-group-item reset" data-field="rarity">
+      Reset Rarity Filter
+    </li>
     <% 6.times do |i| %>
-      <li class="list-group-item" data-filter-field="rarity" data-filter-value="<%= i %>"> <%= "#{i}★" %> </li>
+      <li class="list-group-item filter" data-field="rarity" data-value="<%= i %>"> <%= "#{i}★" %> </li>
     <% end %>
   </ul>
 </div>

@@ -5,11 +5,21 @@ $(document).ready(function(){
     rarity: []
   }
 
-  $('#servantTableFilter').on('click', function(e) {
-    listElement = $(e.target).closest('li')
+  function prunedState() {
+    var result = {}
+    Object.keys(filterState).forEach(function(k) {
+      if (filterState[k].length > 0) {
+        result[k] = filterState[k]
+      }
+    })
+    return result
+  }
+
+  $('#servantTableFilter li.filter').on('click', function(e) {
+    listElement = $(e.currentTarget)
     listData = listElement.data()
-    filterField = listData.filterField
-    filterValue = listData.filterValue.toString()
+    filterField = listData.field
+    filterValue = listData.value.toString()
     if (filterState[filterField].includes(filterValue)) {
       filterState[filterField] = filterState[filterField].filter(function(x) {
         return x !== filterValue
@@ -19,13 +29,15 @@ $(document).ready(function(){
       filterState[filterField].push(filterValue.toString())
       listElement.addClass('active')
     }
-    var prunedState = {};
-    Object.keys(filterState).forEach(function(k) {
-      if (filterState[k].length > 0) {
-        prunedState[k] = filterState[k]
-      }
-    })
-    $('#servantTable').bootstrapTable('filterBy', prunedState)
+    $('#servantTable').bootstrapTable('filterBy', prunedState())
   })
+
+  $('#servantTableFilter li.reset').on('click', function(e) {
+    resetField = $(e.currentTarget).data().field
+    filterState[resetField] = []
+    $('#servantTableFilter li.filter[data-field="' + resetField + '"]').removeClass('active')
+    $('#servantTable').bootstrapTable('filterBy', prunedState())
+  })
+
 
 });
