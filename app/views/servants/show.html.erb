@@ -1,9 +1,16 @@
-<h3><%= @servant.name %></h3>
-
 <div class="row">
-  <div class="col-md-8">
-
-    <h4>Class: <%= image_tag "servant_icons/#{@servant.servant_class.icon}", size: "40x40" %></h4>
-
+  <div class="col-xs-8">
+    <%= image_tag "servant_icons/#{@servant.servant_class.icon}", size: "75x75" , style: "float:left;margin-right:10px;"%>
+    <h2><%= @servant.name %><span class="pull-right"><%= 'x' * @servant.rarity %></span></h2>
   </div>
 </div>
+<div class="row">
+  <div class="col-xs-8">
+    <%= link_to "Stats", servant_path(@servant, anchor: 'statistics')%>
+    <%= link_to "Noble Phantasm", servant_path(@servant, anchor: 'phantasm')%>
+    <%= link_to "Biography", servant_path(@servant, anchor: 'biography')%>
+  </div>
+</div>
+<div class="row" id="statistics"></div>
+<div class="row" id="phantasm"></div>
+<div class="row" id="biography"></div>

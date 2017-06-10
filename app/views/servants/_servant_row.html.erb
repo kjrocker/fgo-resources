@@ -9,7 +9,7 @@
     <%= image_tag (servant.avatar.present? ? servant.avatar.url : ""), hover: servant.name %>
   </td>
   <td>
-    <%= servant.name %> <%= link_to "Edit", edit_servant_path(servant) %><br />
+    <%= link_to "#{servant.name}", servant_path(servant) %> <small><%= link_to "Edit", edit_servant_path(servant) %></small><br />
     <%= servant.tag_list %>
   </td>
   <td>
