@@ -1,16 +1,57 @@
 <div class="row">
-  <div class="col-xs-8">
+  <div class="col-xs-12">
     <%= image_tag "servant_icons/#{@servant.servant_class.icon}", size: "75x75" , style: "float:left;margin-right:10px;"%>
     <h2><%= @servant.name %><span class="pull-right"><%= 'x' * @servant.rarity %></span></h2>
   </div>
 </div>
 <div class="row">
-  <div class="col-xs-8">
+  <div class="col-xs-12">
     <%= link_to "Stats", servant_path(@servant, anchor: 'statistics')%>
     <%= link_to "Noble Phantasm", servant_path(@servant, anchor: 'phantasm')%>
     <%= link_to "Biography", servant_path(@servant, anchor: 'biography')%>
   </div>
 </div>
-<div class="row" id="statistics"></div>
-<div class="row" id="phantasm"></div>
-<div class="row" id="biography"></div>
+<div class="row" id="statistics">
+  <div class="col-md-12">
+    <table class="table table-striped stat-table">
+      <thead>
+        <tr>
+          <td colspan="4">Basic Statistics</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="attr">Name</td>
+          <td colspan="3"><%= @servant.name %></td>
+        </tr>
+        <tr>
+          <td class="attr">ID No.</td>
+          <td><%= @servant.official_id %></td>
+          <td class="attr">Cost</td>
+          <td><%= @servant.cost %></td>
+        </tr>
+        <tr>
+          <td class="attr">Base HP</td>
+          <td><%= @servant.base_hp %></td>
+          <td class="attr">Base ATK</td>
+          <td><%= @servant.base_atk %></td>
+        </tr>
+        <tr>
+          <td class="attr">Max HP</td>
+          <td><%= @servant.max_hp %></td>
+          <td class="attr">Max ATK</td>
+          <td><%= @servant.max_atk %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-4">
+
+  </div>
+</div>
+<div class="row" id="phantasm">
+
+</div>
+<div class="row" id="biography">
+
+</div>
