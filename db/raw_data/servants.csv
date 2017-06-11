@@ -1,7 +1,8 @@
-ID,Name,Rarity,Class
-001,Mashu Kyrielight,3,Shielder
-002,Artoria Pendragon,5,Saber
-003,Artoria Pendragon (Alter),4,Saber
+ID,Name,Rarity,Class,Cost,BaseHP,BaseATK,MaxHP,MaxATK,Quick,Arts,Buster,Unlock,Limited,Unplayable
+001,Mashu Kyrielight,3,Shielder,0,1854,1261,10302,6791,1,2,2,false,false,false
+001,Mashu Kyrielight,4,Shielder,0,2060,1455,12877,8730,1,2,2,true,false,false
+002,Artoria Pendragon,5,Saber,16,2222,1734,15150,11221,1,2,2,false,false,false
+003,Artoria Pendragon (Alter),4,Saber,12,1854,1708,11589,10248,1,2,2,true,false,false
 004,Artoria Pendragon (Lily),4,Saber
 005,Nero Claudius,4,Saber
 006,Siegfried,4,Saber

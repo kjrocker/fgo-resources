@@ -10,28 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170521204343) do
+ActiveRecord::Schema.define(version: 20170610213345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "cards", force: :cascade do |t|
-    t.integer  "official_id"
-    t.string   "name"
-    t.integer  "rarity"
-    t.integer  "servant_class_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.string   "type"
-    t.string   "avatar"
-    t.json     "portraits"
-    t.index ["servant_class_id"], name: "index_cards_on_servant_class_id", using: :btree
-  end
 
   create_table "servant_classes", force: :cascade do |t|
     t.string  "name"
     t.string  "icon"
     t.integer "sort_order"
+  end
+
+  create_table "servants", force: :cascade do |t|
+    t.integer  "official_id"
+    t.string   "name"
+    t.integer  "rarity"
+    t.integer  "servant_class_id"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "avatar"
+    t.json     "portraits"
+    t.integer  "cost",             default: 0,     null: false
+    t.integer  "base_hp",          default: 0,     null: false
+    t.integer  "base_atk",         default: 0,     null: false
+    t.integer  "max_hp",           default: 0,     null: false
+    t.integer  "max_atk",          default: 0,     null: false
+    t.integer  "buster_cards",     default: 0,     null: false
+    t.integer  "quick_cards",      default: 0,     null: false
+    t.integer  "arts_cards",       default: 0,     null: false
+    t.boolean  "unlockable",       default: false, null: false
+    t.boolean  "limited",          default: false, null: false
+    t.boolean  "unplayable",       default: false, null: false
+    t.text     "comments",         default: [],    null: false, array: true
+    t.string   "traits",           default: [],    null: false, array: true
+    t.index ["servant_class_id"], name: "index_servants_on_servant_class_id", using: :btree
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -51,6 +63,6 @@ ActiveRecord::Schema.define(version: 20170521204343) do
     t.index ["name"], name: "index_tags_on_name", unique: true, using: :btree
   end
 
-  add_foreign_key "cards", "servant_classes"
+  add_foreign_key "servants", "servant_classes"
   add_foreign_key "taggings", "tags"
 end
